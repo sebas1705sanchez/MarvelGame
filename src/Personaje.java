@@ -6,7 +6,7 @@ public class Personaje {
     public Personaje(String name, int health, int power) {
         this.name = name;
         this.health = health;
-        this.power = health;
+        this.power = power;
     }
 
     public String getName() {
