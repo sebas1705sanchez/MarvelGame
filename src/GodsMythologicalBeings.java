@@ -7,8 +7,12 @@ public class GodsMythologicalBeings {
         this.specialAbility = specialAbility;
     }
 
-    public String getName() {
+    public String getCharacterName() {
         return character.getName();
+    }
+
+    public void SetCharacterName(String name) {
+        this.character.setName(name);
     }
 
     public String getSpecialAbility() {

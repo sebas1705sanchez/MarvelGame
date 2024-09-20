@@ -30,7 +30,7 @@ public class Main {
             switch (op) {
                 case 1:
 //                    System.out.println("game");
-                    System.out.println("nombre: " + diosThor.getName() + " habilidad especial: " + diosThor.getSpecialAbility());
+                    System.out.println("nombre: " + diosThor.getCharacterName() + " habilidad especial: " + diosThor.getSpecialAbility());
 
                     break;
 

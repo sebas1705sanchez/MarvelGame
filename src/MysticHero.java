@@ -4,6 +4,7 @@ public class MysticHero {
 
     public MysticHero(Personaje character, String spell){
         this.character = character;
+        this.spell = spell;
     }
 
     public String getName() {

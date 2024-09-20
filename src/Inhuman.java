@@ -13,8 +13,16 @@ public class Inhuman {
         return habilidad;
     }
 
-    public String getName() {
+    public void setHabilidad(String habilidad) {
+        this.habilidad = habilidad;
+    }
+
+    public String getCharacterName() {
         return character.getName();
+    }
+
+    public void setCharacterName(String name){
+        this.character.setName(name);
     }
 
     public String getArmorhability() {

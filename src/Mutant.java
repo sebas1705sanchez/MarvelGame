@@ -9,29 +9,32 @@ public class Mutant {
         this.specialAbility = specialability;
         this.transformation = transformation;
     }
-    //getters
+
     public String getSpecialAbility() {
         return specialAbility;
+    }
+
+    public void setSpecialAbility(String specialAbility) {
+        this.specialAbility = specialAbility;
     }
 
     public String getTransformation() {
         return transformation;
     }
 
-    public String getName() {
-        return character.getName();
-    }
-    // Setters
-    public void setSpecialAbility(String specialAbility) {
-        this.specialAbility = specialAbility;
-    }
-
     public void setTransformation(String transformation) {
         this.transformation = transformation;
     }
 
-    public void activateTransformation() {
-        System.out.println("El personaje " + character.getName() + " se tranformo " + this.transformation);
+    public String getCharacterName() {
+        return character.getName();
     }
 
+    public void setCharacterName(String name){
+        this.character.setName(name);
+    }
+
+    public void activateTransformation() {
+        System.out.println("El personaje " + character.getName() + " se tranformo " + transformation);
+    }
 }
