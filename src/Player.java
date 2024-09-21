@@ -1,19 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
-    private String name;
     private String nickname;
-    // private String password;
+    private List<Personaje> characters;
 
-    public Player(String name, String nickname) {
-        this.name = name;
+    public Player(String nickname) {
         this.nickname = nickname;
+
+        this.characters = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
+    public void getListCharacter() {
+        for (int i = 0; i< characters.size(); i++) {
+            System.out.println(characters.get(i).getName());
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCharacters(Personaje characters) {
+        this.characters.add(characters);
     }
 
     public String getNickname() {
@@ -26,7 +31,6 @@ public class Player {
 
     public void showData() {
         System.out.println("-- Datos Jugador  --");
-        System.out.println("Nombre: " + name);
         System.out.println("nickname: " + nickname);
     }
 }
