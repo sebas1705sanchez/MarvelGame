@@ -31,6 +31,7 @@ public class prueba {
         System.out.println(characters.size());
 
         for (int i = 0; i< characters.size(); i++) {
+            characters.get(i).getId();
             characters.get(i).showData();
         }
 

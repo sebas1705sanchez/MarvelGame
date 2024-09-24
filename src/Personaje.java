@@ -1,4 +1,6 @@
 public class Personaje {
+    private int id;
+    static int count = 0;
     private String name;
     private int health;
     private int power;
@@ -7,6 +9,8 @@ public class Personaje {
         this.name = name;
         this.health = health;
         this.power = power;
+
+        this.id = count++;
     }
 
     public String getName() {
@@ -52,6 +56,10 @@ public class Personaje {
         } else {
             System.out.println("El personaje atacante ha muerto y no puede atacar.");
         }
+    }
+
+    public void getId() {
+        System.out.println(this.id);
     }
 
     public void showData() {
