@@ -41,7 +41,6 @@ public class Personaje {
         this.health += health;
     }
 
-
     public void attack(Personaje victima) {
         if (this.health > 0) { // Verifica que el que ataca este vivo
             if (victima.getHealth() > 0) { // verifica si el que esta siendo atacado esta vivido
@@ -55,6 +54,11 @@ public class Personaje {
         }
     }
 
-
+    public void showData() {
+        System.out.println("Name: " + name);
+        System.out.println("Health: " + health);
+        System.out.println("Power: " + power);
+        System.out.println();
+    }
 }
 
