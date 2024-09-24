@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class prueba {
     public static void main(String[] args) {
         List<Personaje> characters = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
 
         Personaje thor = new Personaje("thor", 1000, 105);
         GodsMythologicalBeings diosThor = new GodsMythologicalBeings(thor, "trueno");
@@ -25,8 +27,6 @@ public class prueba {
         characters.add(loki);
 
         Player player = new Player("sebas");
-        player.setCharacters(thor);
-        player.setCharacters(zeus);
 
         System.out.println(characters.size());
 
@@ -34,6 +34,11 @@ public class prueba {
             characters.get(i).getId();
             characters.get(i).showData();
         }
+        int op = sc.nextInt();
+        player.setCharacters(characters.get(op));
+
+        op = sc.nextInt();
+        player.setCharacters(characters.get(op));
 
         player.getListCharacter();
     }
