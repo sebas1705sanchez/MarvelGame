@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -6,6 +7,7 @@ public class prueba {
     public static void main(String[] args) {
         List<Personaje> characters = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
+        Player player = new Player("sebas");
 
         Personaje thor = new Personaje("thor", 1000, 105);
         GodsMythologicalBeings diosThor = new GodsMythologicalBeings(thor, "trueno");
@@ -26,20 +28,39 @@ public class prueba {
         GodsMythologicalBeings diosLoki = new GodsMythologicalBeings(loki, "engaño");
         characters.add(loki);
 
-        Player player = new Player("sebas");
-
+        System.out.println("Cantidad de Personajes: ");
         System.out.println(characters.size());
+        System.out.println("_________________________");
 
-        for (int i = 0; i< characters.size(); i++) {
-            characters.get(i).getId();
-            characters.get(i).showData();
+        for (Personaje p: characters) {
+            System.out.println("Id: " + p.getId() + " Name: " + p.getName());
         }
+        System.out.println("Personaje 1: ");
         int op = sc.nextInt();
         player.setCharacters(characters.get(op));
 
+        System.out.println("Personaje 2: ");
         op = sc.nextInt();
         player.setCharacters(characters.get(op));
 
+        System.out.println("Lista de Personajes: ");
         player.getListCharacter();
+        System.out.println("_____________________");
+
+        System.out.println("Eliminar un Personaje");
+        op = sc.nextInt();
+
+        System.out.println("Eleguido");
+        System.out.println(characters.get(op).getName());
+        System.out.println("------------");
+
+        characters.remove(op);
+
+        System.out.println("Lista de Personajes menos el que se borro: ");
+        for (Personaje p: characters) {
+            System.out.println(p.getName());
+            p.getId();
+        }
+
     }
 }

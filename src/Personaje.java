@@ -58,8 +58,8 @@ public class Personaje {
         }
     }
 
-    public void getId() {
-        System.out.println(this.id);
+    public int getId() {
+        return this.id;
     }
 
     public void showData() {
